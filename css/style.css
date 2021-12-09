@@ -1,0 +1,9 @@
+.bagian-footer {
+	padding: 50px 10px !important;
+}
+.tombol,
+.tombol:hover {
+	background: transparent;
+	border: none;
+	color: white;
+}
