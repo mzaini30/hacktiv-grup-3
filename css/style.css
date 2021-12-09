@@ -1,9 +1,45 @@
 .bagian-footer {
 	padding: 50px 10px !important;
 }
+
 .tombol,
-.tombol:hover {
+.tombol:hover,
+.tombol:focus {
 	background: transparent;
 	border: none;
 	color: white;
+}
+
+.judul {
+	font-weight: bold;
+	border-left-color: orange;
+	border-left-width: 3px;
+	border-left-style: solid;
+	padding-left: 5px;
+}
+
+.bagian-atas {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.bagian-atas>.youtube {
+	grid-column: span 2 / span 2;
+}
+
+.isinya {
+	padding-top: 30px;
+}
+
+.bagian-navbar {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+.see-more {
+	font-weight: bold;
+	text-align: right;
+	cursor: pointer;
+	font-size: 30px;
 }

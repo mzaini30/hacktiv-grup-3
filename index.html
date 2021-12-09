@@ -7,35 +7,123 @@
 	<title>Squid Game - Project Hacktiv8 - Grup 3</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> -->
+	<script src="js/jquery.slim.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/app.js" defer></script>
 </head>
 
 <body>
 	<!-- header navbar -->
-	<header>
+	<header class="bagian-navbar">
 		<div class="d-flex bg-dark text-white p-3">
 			<div class="p-2 flex-grow-1 bd-highlight">
 				<h1 style="font-size:30px"><strong>Squid Game</strong></h1>
 			</div>
-			<div class="p-2 bd-highlight"><button type="button" class="btn btn-light tombol">Home</button></div>
-			<div class="p-2 bd-highlight"><button type="button" class="btn btn-light tombol">Profil Pemain</button></div>
+			<div class="p-2 bd-highlight"><button onclick="beranda()" type="button" class="btn btn-light tombol">Home</button></div>
+			<div class="p-2 bd-highlight"><button type="button" class="btn btn-light tombol" onclick="pemain()">Profil Pemain</button></div>
 		</div>
 	</header>
-	<!-- home -->
-	<div class="row m-1 p-2">
-		<div class="col-3 m-2 p-1">
-			<div class="card" style="width: 200px">
-				<img src="https://foto.kontan.co.id/tW6ho4lqzArolU8X7Ob0gwldj5w=/smart/2021/08/23/1756142795p.jpg" class="card-img-top" style="width: 300px;" alt="post image" />
-				<div class="card-body"></div>
-			</div>
-		</div>
-		<div class="col-6 m-2 p-1">
-			<div class="embed-responsive embed-responsive-16by9" style="width: 600px;">
-				<iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=oqxAJKy0ii4" allowfullscreen></iframe>
-			</div>
-		</div>
-		<!-- sidebar -->
-		<div class="=col-3 m-2 p-1">
+	<main class="row container-fluid isinya">
+		<section class="col-9">
+			<section class="bagian-beranda">
+				<section class="bagian-atas">
+					<div class="sampul">
+						<!-- <div class="card" style="width: 200px"> -->
+						<img src="https://foto.kontan.co.id/tW6ho4lqzArolU8X7Ob0gwldj5w=/smart/2021/08/23/1756142795p.jpg" class="card-img-top" style="width: 300px;" alt="post image" />
+						<div class="card-body"></div>
+						<!-- </div> -->
+					</div>
+					<div class="youtube">
+						<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+						<div class='embed-container'><iframe src='https://www.youtube.com/embed/oqxAJKy0ii4' frameborder='0' allowfullscreen></iframe></div>
+						<!-- <div class="embed-responsive embed-responsive-16by9" style="width: 600px;">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=oqxAJKy0ii4" allowfullscreen></iframe>
+					</div> -->
+					</div>
+				</section>
+				<article class="sinopsis">
+					<h2><b>Sinopsis Film</b></h2><br>
+					<p>Squid Game merupakan Drama Korea terbaru yang diluncurkan oleh Netflix, dan kini telah berhasil memecahkan rekor drama Korea dalam kurun waktu tiga hari setelah peluncuran.</p><br>
+					<p>Squid Game menempati posisi ke 3 mengalahkan Clickbait dan Money Heist, dilansir dari Top TV Shows on Netflix pada 19 September 2021. Untuk sementara, posisi pertama diduduki oleh Sex Education dan posisi kedua diduduki oleh Lucifer.</p><br>
+					<p>Squid Game bercerita tentang sebuah permainan dimana para peserta dituntut untuk mampu bertahan hidup dan akan mendapatkan hadiah uang tunai sebesar 45,6 Miliar Won jika pemain dapat memenangkan permainan tersebut.</p><br>
+					<p>Lee Jung Jae sebagai Seong Gi-Hun dan Park Hae Soo sebagai Cho Sang-Woo, berperan sebagai dua teman masa kecil yang bertemu kembali dalam permainan misterius ini untuk mengetahui bahwa ada lebih banyak yang harus dipertaruhkan daripada hadiah uang tersebut.</p><br>
+					<p>Suatu hari Seong Gi-Hun dipecat dari pekerjaannya sehingga ia menjadi pengangguran. Kehidupannya berubah menjadi sengsara, tetapi dirinya sempat mendengar tentang sebuah permainan yang akan memberikan hadiah uang sebesar 45,6 Miliar Won kepada pemenangnya.</p><br>
+					<p>Dalam permainan Squid Game ini, menceritakan tentang sekelompok kandidat sejumlah 456 kandidat, yang berpartisipasi dalam permainan anak-anak untuk memenangkan hadiah istimewah tersebut.</p><br>
+					<p>Pertempuran yang sangat sengit ini membuat para kandidat memiliki rasa takut yang luar biasa dalam mempertaruhkan nyawa mereka hanya untuk bertahan hidup. Namun, para penonton dibiarkan bertanya-tanya siapakah orang yang bertanggung jawab dibalik permainan berskala besar ini dengan taruhan hidup atau mati.</p><br>
+				</article>
+			</section>
+			<section class="semua-pemain">
+				<h2><b>Pemain Utama</b></h2><br>
+				<div class="media mt-1 mb-2 p-2">
+					<img src="images/lee Jung jae.jpeg" class="mr-3" style="width: 100px;" alt="...">
+					<div class="media-body">
+						<p class="mt-0">Lee Jung-jae</p>
+						<p>sebagai Seong Gi-hun</p>
+					</div>
+				</div>
+				<div class="media mt-1 mb-2 p-2">
+					<img src="images/wi ha joon.jpeg" class="mr-3" style="width: 100px;" alt="...">
+					<div class="media-body">
+						<p class="mt-0">Wi Ha-Joon</p>
+						<p>sebagai Hwang Jun-ho</p>
+					</div>
+				</div>
+				<div class="media mt-1 mb-2 p-2">
+					<img src="images/Oh Young Soo.jpeg" class="mr-3" style="width: 100px;" alt="...">
+					<div class="media-body">
+						<p class="mt-0">Oh Yeong-su</p>
+						<p>sebagai Oh Il-nam</p>
+					</div>
+				</div>
+				<div class="media mt-1 mb-2 p-2">
+					<img src="images/anupam tripathi.jpeg" class="mr-3" style="width: 100px;" alt="...">
+					<div class="media-body">
+						<p class="mt-0">Anupam Tripathi</p>
+						<p>sebagai Ali Abdul</p>
+					</div>
+				</div>
+				<div class="media mt-1 mb-2 p-2">
+					<img src="images/kim Joo ryung.jpeg" class="mr-3" style="width: 100px;" alt="...">
+					<div class="media-body">
+						<p class="mt-0">Kim Joo-Ryung</p>
+						<p>sebagai Han Mi-nyeo</p>
+					</div>
+				</div>
+				<div class="media mt-1 mb-2 p-2">
+					<img src="images/Jung Ho Yeon.jpeg" class="mr-3" style="width: 100px;" alt="...">
+					<div class="media-body">
+						<p class="mt-0">Jung Hoyeon</p>
+						<p>sebagai Kang Sae-byeok</p>
+					</div>
+				</div>
+				<div class="media mt-1 mb-2 p-2">
+					<img src="images/Park Hae Soo.jpeg" class="mr-3" style="width: 100px;" alt="...">
+					<div class="media-body">
+						<p class="mt-0">Park Hae-soo</p>
+						<p>sebagai Cho Sang-woo</p>
+					</div>
+				</div>
+				<div class="media mt-1 mb-2 p-2">
+					<img src="images/Heo Sung Tae.jpeg" class="mr-3" style="width: 100px;" alt="...">
+					<div class="media-body">
+						<p class="mt-0">Heo Sung-tae</p>
+						<p>sebagai Jang Deok-su</p>
+					</div>
+				</div>
+				<div class="media mt-1 mb-2 p-2">
+					<img src="images/Lee Byung Hun.jpeg" class="mr-3" style="width: 100px;" alt="...">
+					<div class="media-body">
+						<p class="mt-0">Lee Byung-hun</p>
+						<p>sebagai Front man</p>
+					</div>
+				</div>
+			</section>
+		</section>
+		<section class="col-3">
 			<div class="container" style="width: 200px;">
+				<h2 class="judul">Photos</h2>
 				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
@@ -44,9 +132,9 @@
 						<div class="carousel-item">
 							<img src="https://m.media-amazon.com/images/M/MV5BMTUzZWNkNWEtMGIxYi00ZTEyLTlkOWEtMWRjODQ0YjgwNTRkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UY100_CR25,0,100,100_AL_.jpg" class="d-block w-100" alt="...">
 						</div>
-						<div class="carousel-item">
+						<!-- <div class="carousel-item">
 							<img src="https://cdns.klimg.com/kapanlagi.com/p/headline/476x238/bawa-tema-action-advanture-ini-5-fakta--18190c.jpg" class="d-block w-100" alt="...">
-						</div>
+						</div> -->
 					</div>
 					<button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -57,95 +145,32 @@
 						<span class="sr-only">Next</span>
 					</button>
 				</div>
+				<h2 class="judul mt-4">Top Cast</h2>
+				<section>
+					<div class="media mt-1 mb-2 p-2">
+						<img src="images/lee Jung jae.jpeg" class="mr-3" style="width: 100px;" alt="...">
+						<div class="media-body">
+							<p class="mt-0">Lee Jung-jae</p>
+							<p>sebagai Seong Gi-hun</p>
+						</div>
+					</div>
+					<div class="media mt-1 mb-2 p-2">
+						<img src="images/wi ha joon.jpeg" class="mr-3" style="width: 100px;" alt="...">
+						<div class="media-body">
+							<p class="mt-0">Wi Ha-Joon</p>
+							<p>sebagai Hwang Jun-ho</p>
+						</div>
+					</div>
+				</section>
+				<section class="see-more" onclick="pemain()">see more &rarr;</section>
 			</div>
-		</div>
-	</div><br>
-	<!-- Sinopsis -->
-	<div class="row m-5 p-5">
-		<div class="col-9 m-2 p-1" style="width: 800px;">
-			<h2><b>Sinopsis Film</b></h2><br>
-			<p>Squid Game merupakan Drama Korea terbaru yang diluncurkan oleh Netflix, dan kini telah berhasil memecahkan rekor drama Korea dalam kurun waktu tiga hari setelah peluncuran.</p><br>
-			<p>Squid Game menempati posisi ke 3 mengalahkan Clickbait dan Money Heist, dilansir dari Top TV Shows on Netflix pada 19 September 2021. Untuk sementara, posisi pertama diduduki oleh Sex Education dan posisi kedua diduduki oleh Lucifer.</p><br>
-			<p>Squid Game bercerita tentang sebuah permainan dimana para peserta dituntut untuk mampu bertahan hidup dan akan mendapatkan hadiah uang tunai sebesar 45,6 Miliar Won jika pemain dapat memenangkan permainan tersebut.</p><br>
-			<p>Lee Jung Jae sebagai Seong Gi-Hun dan Park Hae Soo sebagai Cho Sang-Woo, berperan sebagai dua teman masa kecil yang bertemu kembali dalam permainan misterius ini untuk mengetahui bahwa ada lebih banyak yang harus dipertaruhkan daripada hadiah uang tersebut.</p><br>
-			<p>Suatu hari Seong Gi-Hun dipecat dari pekerjaannya sehingga ia menjadi pengangguran. Kehidupannya berubah menjadi sengsara, tetapi dirinya sempat mendengar tentang sebuah permainan yang akan memberikan hadiah uang sebesar 45,6 Miliar Won kepada pemenangnya.</p><br>
-			<p>Dalam permainan Squid Game ini, menceritakan tentang sekelompok kandidat sejumlah 456 kandidat, yang berpartisipasi dalam permainan anak-anak untuk memenangkan hadiah istimewah tersebut.</p><br>
-			<p>Pertempuran yang sangat sengit ini membuat para kandidat memiliki rasa takut yang luar biasa dalam mempertaruhkan nyawa mereka hanya untuk bertahan hidup. Namun, para penonton dibiarkan bertanya-tanya siapakah orang yang bertanggung jawab dibalik permainan berskala besar ini dengan taruhan hidup atau mati.</p><br>
-		</div>
-		<div class="col-3"></div>
-	</div>
-	<!-- Cast -->
-	<div class="container mt-5 mb-5 p-2">
-		<h2><b>Pemain Utama</b></h2><br>
-		<div class="media mt-1 mb-2 p-2">
-			<img src="images/lee Jung jae.jpeg" class="mr-3" style="width: 100px;" alt="...">
-			<div class="media-body">
-				<h5 class="mt-0">Lee Jung-jae</h5>
-				<p>sebagai Seong Gi-hun</p>
-			</div>
-		</div>
-		<div class="media mt-1 mb-2 p-2">
-			<img src="images/wi ha joon.jpeg" class="mr-3" style="width: 100px;" alt="...">
-			<div class="media-body">
-				<h5 class="mt-0">Wi Ha-Joon</h5>
-				<p>sebagai Hwang Jun-ho</p>
-			</div>
-		</div>
-		<div class="media mt-1 mb-2 p-2">
-			<img src="images/Oh Young Soo.jpeg" class="mr-3" style="width: 100px;" alt="...">
-			<div class="media-body">
-				<h5 class="mt-0">Oh Yeong-su</h5>
-				<p>sebagai Oh Il-nam</p>
-			</div>
-		</div>
-		<div class="media mt-1 mb-2 p-2">
-			<img src="images/anupam tripathi.jpeg" class="mr-3" style="width: 100px;" alt="...">
-			<div class="media-body">
-				<h5 class="mt-0">Anupam Tripathi</h5>
-				<p>sebagai Ali Abdul</p>
-			</div>
-		</div>
-		<div class="media mt-1 mb-2 p-2">
-			<img src="images/kim Joo ryung.jpeg" class="mr-3" style="width: 100px;" alt="...">
-			<div class="media-body">
-				<h5 class="mt-0">Kim Joo-Ryung</h5>
-				<p>sebagai Han Mi-nyeo</p>
-			</div>
-		</div>
-		<div class="media mt-1 mb-2 p-2">
-			<img src="images/Jung Ho Yeon.jpeg" class="mr-3" style="width: 100px;" alt="...">
-			<div class="media-body">
-				<h5 class="mt-0">Jung Hoyeon</h5>
-				<p>sebagai Kang Sae-byeok</p>
-			</div>
-		</div>
-		<div class="media mt-1 mb-2 p-2">
-			<img src="images/Park Hae Soo.jpeg" class="mr-3" style="width: 100px;" alt="...">
-			<div class="media-body">
-				<h5 class="mt-0">Park Hae-soo</h5>
-				<p>sebagai Cho Sang-woo</p>
-			</div>
-		</div>
-		<div class="media mt-1 mb-2 p-2">
-			<img src="images/Heo Sung Tae.jpeg" class="mr-3" style="width: 100px;" alt="...">
-			<div class="media-body">
-				<h5 class="mt-0">Heo Sung-tae</h5>
-				<p>sebagai Jang Deok-su</p>
-			</div>
-		</div>
-		<div class="media mt-1 mb-2 p-2">
-			<img src="images/Lee Byung Hun.jpeg" class="mr-3" style="width: 100px;" alt="...">
-			<div class="media-body">
-				<h5 class="mt-0">Lee Byung-hun</h5>
-				<p>sebagai Front man</p>
-			</div>
-		</div>
-	</div>
+		</section>
+	</main>
 	<!-- footer -->
 	<footer>
 		<div class="d-flex bg-dark text-white p-3 text-center bagian-footer">
 			<div class="flex-grow-1 justify-content-center">
-				<h3 style="font-size:20px"><strong>Squid Game</strong></h3><br>
+				<p style="font-size:20px"><strong>Squid Game</strong></p><br>
 				<p>Wacth Full Episodes</p>
 				<p>On NETFLIX</p>
 			</div>
